@@ -1,33 +1,27 @@
-# Test front end
+# Test Frontend - Wemap
 
-Dans ce test il s'agira:
+Ce dépôt est une implémentation du test frontend pour Wemap. Il utilise React pour créer une interface utilisateur qui permet de rechercher, afficher, et paginer des données provenant de l'API de Wemap.
 
-- D'utiliser l'API de Wemap pour récupérer du contenu
-- D'afficher la liste de contenu
-- Créer un champ de recherche pour filtrer le contenu grâce à l'API
-- Faire une pagination 10 par 10
+## Structure du projet
 
-Une base du projet vous est donné en React mais vous êtes libre d'utiliser une autre techno, utilisez celle pour laquelle vous êtes à l'aise.
-Dans ce test, pas de pression mais on aura certaines exigences :) notamment sur :
+- **services/wemapAPI.js** : Contient la logique pour effectuer des requêtes à l'API de Wemap.
+- **ui/** : Ce dossier contient des composants d'interface utilisateur réutilisables tels que `Card`, `CardPlaceholder`, `Pagination`, et `SearchBar`.
+- **DataDisplay.js** : Le composant principal qui orchestre la recherche, l'affichage des données, et la pagination.
 
-- la segmentation des composants;
-- la propreté du code;
-- la logique d’intégration;
+## Comment démarrer
 
-Lien de l'API:
+1. Clonez ce dépôt.
+2. Installez les dépendances avec `npm install`.
+3. Lancez l'application avec `npm run dev`.
 
-https://api.getwemap.com/v3.0/pinpoints/search
+## Fonctionnalités
 
-Paramètres:
-- `query`: Texte de recherche
-- `offset`: Position du début des résultats
-- `limit`: Nombre de résultat
+- **Recherche** : Utilisez la barre de recherche pour filtrer les données affichées.
+- **Pagination** : Naviguez entre les pages de résultats.
+- **Affichage des données** : Les résultats sont affichés sous forme de cartes avec une image, un nom, et une adresse.
 
-Exemple: `https://api.getwemap.com/v3.0/pinpoints/search?query=Musee&offset=0&limit=10`
+## Choix de conception
 
-Lien vers la carte:
-https://livemap.getwemap.com/#/pinpoints/ID
-
-## Rendu attendu 
-
-![](/rendu.png)
+- **React Query** : Utilisé pour gérer les requêtes de données et la mise en cache.
+- **Axios** : Une bibliothèque de requêtes HTTP pour interagir avec l'API.
+- **Lucide-react** : Une bibliothèque d'icônes pour embellir l'interface utilisateur.
